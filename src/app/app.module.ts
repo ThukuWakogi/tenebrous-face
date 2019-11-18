@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { MatInputModule } from '@angular/material/input'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -34,7 +35,8 @@ import { ProfileComponent } from './components/profile/profile.component'
     FlexLayoutModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,75 @@
-<p>profile works!</p>
+<div class="cstm-container" fxLayout="column">
+  <div class="cstm-user-info" fxLayout.xs="column">
+    <div fxShow fxHide.gt-xs fxLayout="column" class="cstm-user-info-xs">
+      <div fxLayout="row" class="cstm-full-width">
+        <img class="cstm-avatar-sm" src="assets/images/siberian-husky-dog-breed-info.jpg" alt="" />
+        <div fxLayout="column" class="cstm-full-width cstm-user-info-username">
+          <div fxLayout="row">
+            <h2 class="mat-h1">user</h2>
+            <button mat-icon-button>
+              <mat-icon>settings_applications</mat-icon>
+            </button>
+          </div>
+          <button mat-stroked-button color="primary" class="cstm-full-width">follow</button>
+        </div>
+      </div>
+      <p>user</p>
+    </div>
+    <div fxHide fxShow.gt-xs fxLayout="row" class="cstm-user-info-md">
+      <img class="cstm-avatar-md" src="assets/images/siberian-husky-dog-breed-info.jpg" alt="" />
+      <div fxLayout="column" style="margin-left: 16px;" class="cstm-info-controls">
+        <div fxLayout="row" style="margin-left: 24px;">
+          <h2 class="mat-h1">user</h2>
+          <button mat-stroked-button color="primary" class="cstm-full-width">follow</button>
+          <button mat-icon-button>
+            <mat-icon>settings_applications</mat-icon>
+          </button>
+        </div>
+        <div fxLayout="row" style="margin: 8px 0px;">
+          <div>
+            <h3 class="mat-subheading-2">3 posts</h3>
+          </div>
+          <div>
+            <h3 class="mat-subheading-2">3 followers</h3>
+          </div>
+          <div>
+            <h3 class="mat-subheading-2">3 following</h3>
+          </div>
+        </div>
+        <div style="margin-left: 24px;">user</div>
+      </div>
+    </div>
+  </div>
+  <div class="cstm-user-pics">
+    <div fxShow fxHide.gt-xs fxLayout="column" class="cstm-user-info-xs">
+      <div class="cstm-posts-follow-info cstm-full-width" fxLayout="row">
+        <div fxFlex="33.33%">
+          <h3 class="mat-subheading-2">3</h3>
+          <p>posts</p>
+        </div>
+        <div fxFlex="33.33%">
+          <h3 class="mat-subheading-2">3</h3>
+          <p>followers</p>
+        </div>
+        <div fxFlex="33.33%">
+          <h3 class="mat-subheading-2">3</h3>
+          <p>following</p>
+        </div>
+      </div>
+    </div>
+    <mat-grid-list cols="3" rowHeight="1:1">
+      <mat-grid-tile>
+        <img mat-card-image src="assets/images/patmos.jpg" alt="">
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img mat-card-image src="assets/images/patmos.jpg" alt="">
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img mat-card-image src="assets/images/patmos.jpg" alt="">
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img mat-card-image src="assets/images/patmos.jpg" alt="">
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
