@@ -4,8 +4,16 @@ mat-toolbar {
   mat-toolbar-row {
     max-width: 1010px;
     margin: 0px auto;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 section {
   padding-top: 85px;
+}
+
+.cstm-flex-growth-inbetween {
+  flex: 1 1 auto;
 }

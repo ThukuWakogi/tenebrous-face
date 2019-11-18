@@ -1,9 +1,12 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <span>tenebrous</span>
+    <a [routerLink]="['/']">tenebrous</a>
+    <div class="cstm-flex-growth-inbetween"></div>
+    <a mat-icon-button [routerLink]="['/user/user']">
+      <mat-icon>person_outlined</mat-icon>
+    </a>
   </mat-toolbar-row>
 </mat-toolbar>
 <section>
   <router-outlet></router-outlet>
 </section>
-
