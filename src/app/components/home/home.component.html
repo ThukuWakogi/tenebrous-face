@@ -1,1 +1,74 @@
-<p>home works!</p>
+<div class="cstm-container" fxLayout="column" fxLayoutGap="60px">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="avatar-div"></div>
+      <mat-card-title>user</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="assets/images/patmos.jpg" alt="">
+    <mat-card-actions>
+      <button mat-icon-button aria-label="like">
+        <mat-icon>favorite_border</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="like">
+        <mat-icon>chat_bubble_outline</mat-icon>
+      </button>
+    </mat-card-actions>
+    <mat-card-content>
+      <div class="cstm-img-comments">lol</div>
+      <form action="">
+        <mat-form-field class="cstm-full-width">
+          <!-- <mat-label>Add a comment...</mat-label> -->
+          <textarea
+            matInput
+            [formControl]="commentFormControl"
+            cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="5"
+            placeholder="Add a comment..."
+          ></textarea>
+          <mat-error *ngIf="commentFormControl.hasError('required')">
+            Email is required
+          </mat-error>
+        </mat-form-field>
+        <button mat-button color="primary">post</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="avatar-div"></div>
+      <mat-card-title>user</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="assets/images/patmos.jpg" alt="">
+    <mat-card-actions>
+      <button mat-icon-button aria-label="like">
+        <mat-icon>favorite_border</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="like">
+        <mat-icon>chat_bubble_outline</mat-icon>
+      </button>
+    </mat-card-actions>
+    <mat-card-content>
+      <div class="cstm-img-comments">lol</div>
+      <form action="">
+        <mat-form-field class="cstm-full-width">
+          <!-- <mat-label>Add a comment...</mat-label> -->
+          <textarea
+            matInput
+            [formControl]="commentFormControl"
+            cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="5"
+            placeholder="Add a comment..."
+          ></textarea>
+          <mat-error *ngIf="commentFormControl.hasError('required')">
+            Email is required
+          </mat-error>
+        </mat-form-field>
+        <button>post</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

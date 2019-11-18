@@ -1,0 +1,11 @@
+mat-toolbar {
+  position: fixed;
+  z-index: 1;
+  mat-toolbar-row {
+    max-width: 1010px;
+    margin: 0px auto;
+  }
+}
+section {
+  padding-top: 85px;
+}
