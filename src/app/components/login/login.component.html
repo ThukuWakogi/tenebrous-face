@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div style="text-align: center;" class="cstm-auth-component">
+    <h1 class="mat-display-3 cstm-font-weight-100">tenebrous</h1>
+    <h6 class="mat-h1 cstm-font-weight-100">Sign up to see photos and videos from your friends.</h6>
+    <form action="">
+        <mat-form-field class="cstm-full-width">
+            <input matInput placeholder="username" [formControl]="usernameFormControl">
+            <mat-error *ngIf="usernameFormControl.hasError('required')">
+              username is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="cstm-full-width">
+            <input matInput placeholder="password" [type]="showPassword ? 'text' : 'password'">
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="showPassword = !showPassword"
+              [attr.aria-label]="'Hide password'"
+            >
+              <mat-icon>{{ showPassword ? 'visibility_on' : 'visibility_off' }}</mat-icon>
+            </button>
+            <mat-error *ngIf="passwordFormControl.hasError('required')">
+              password is required
+            </mat-error>
+          </mat-form-field>
+      <button mat-stroked-button color="primary">register</button>
+    </form>
+    <p>Don't Have an account? <a [routerLink]="['/register']">register</a></p>
+  </div>

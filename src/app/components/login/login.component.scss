@@ -1,0 +1,18 @@
+.cstm-auth-component {
+  max-width: 700px;
+  margin: 0px auto;
+  padding: 16px;
+  h1 {
+    margin: 27px 0 28px 0px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    button {
+      align-self: flex-end;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}

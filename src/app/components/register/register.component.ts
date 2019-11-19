@@ -9,9 +9,8 @@ import { FormControl, Validators } from '@angular/forms'
 export class RegisterComponent implements OnInit {
   showPassword = false
   emailFormControl = new FormControl('', [Validators.required, Validators.email])
-  fullnameFormControl =  new FormControl('', [Validators.required])
+  usernameFormControl =  new FormControl('', [Validators.required])
   passwordFormControl =  new FormControl('', [Validators.required])
-  confirmPasswordFormControl =  new FormControl('', [Validators.required])
 
   constructor() { }
 
