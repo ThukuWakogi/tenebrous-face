@@ -8,6 +8,7 @@ import { Router } from '@angular/router'
   providedIn: 'root'
 })
 export class AuthService {
+  isAuthenticated = false
   authenticatedUser: any = {}
   authenticatedUserChange: Subject<{}> = new Subject()
   errors = {}
@@ -24,6 +25,7 @@ export class AuthService {
         this.authenticatedUser = res.data.user
         this.authenticatedUserChange.next(this.authenticatedUser)
         this.router.navigate([''])
+        this.isAuthenticated = true
       })
       .catch(err => {
         this.clearErrors()
@@ -41,8 +43,31 @@ export class AuthService {
         this.authenticatedUser = res.data.user
         this.authenticatedUserChange.next(this.authenticatedUser)
         this.router.navigate([''])
+        this.isAuthenticated = true
       })
       .catch(err => console.log({err}))
+  }
+
+  getAuthenticatedUser() {
+    axios
+      .get(
+        `${environment.baseURL}udft/`,
+        { headers:
+          {
+            Authorization: `token ${localStorage.getItem('tnbrs_token')}`
+          }
+        }
+      )
+      .then(res => {
+        console.log({res})
+        console.log(this.router.url)
+        if (this.router.url === '/login' || this.router.url === '/register') this.router.navigate([''])
+      })
+      .catch(err => {
+        console.log({err})
+
+        if (err.response.status === 401) this.router.navigate(['login'])
+      })
   }
 
   clearErrors() {

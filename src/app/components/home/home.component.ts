@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,9 +14,12 @@ export class HomeComponent implements OnInit {
     [Validators.required, Validators.email]
   )
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) {
+    this.authService.getAuthenticatedUser()
+  }
 
   ngOnInit() {
+    // this.authService.getAuthenticatedUser()
   }
 
 }
