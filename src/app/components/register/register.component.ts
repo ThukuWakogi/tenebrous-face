@@ -6,6 +6,7 @@ import { AuthService } from 'src/app/services/auth/auth.service'
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
+  providers: [AuthService]
 })
 export class RegisterComponent implements OnInit {
   showPassword = false
@@ -37,8 +38,6 @@ export class RegisterComponent implements OnInit {
 
     if (!this.registerForm.valid) return
 
-    const regform = this.registerForm.value
-    console.log(regform)
     this
       .authService
       .registerUser(this.registerForm.value)
