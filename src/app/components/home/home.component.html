@@ -1,4 +1,39 @@
 <div class="cstm-container" fxLayout="column" fxLayoutGap="10%">
+  <mat-card *ngFor="let image of images">
+    <mat-card-header>
+      <div mat-card-avatar class="avatar-div"></div>
+      <mat-card-title>{{ image.user.username }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ baseURL + image.imageUrl }}" alt="">
+    <mat-card-actions>
+      <button mat-icon-button aria-label="like">
+        <mat-icon>favorite_border</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="like">
+        <mat-icon>chat_bubble_outline</mat-icon>
+      </button>
+    </mat-card-actions>
+    <mat-card-content>
+      <div class="cstm-img-comments">lol</div>
+      <form action="">
+        <mat-form-field class="cstm-full-width">
+          <textarea
+            matInput
+            [formControl]="commentFormControl"
+            cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="5"
+            placeholder="Add a comment..."
+          ></textarea>
+          <mat-error *ngIf="commentFormControl.hasError('required')">
+            Email is required
+          </mat-error>
+        </mat-form-field>
+        <button mat-button color="primary">post</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
   <mat-card>
     <mat-card-header>
       <div mat-card-avatar class="avatar-div"></div>
