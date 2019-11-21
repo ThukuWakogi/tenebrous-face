@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http'
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -17,7 +18,8 @@ import { AppComponent } from './app.component'
 import { RegisterComponent } from './components/register/register.component'
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { LoginComponent } from './components/login/login.component'
+import { LoginComponent } from './components/login/login.component';
+import { UploadphotoComponent } from './components/dialogs/uploadphoto/uploadphoto.component'
 
 @NgModule({
   declarations: [
@@ -25,8 +27,10 @@ import { LoginComponent } from './components/login/login.component'
     RegisterComponent,
     HomeComponent,
     ProfileComponent,
-    LoginComponent
+    LoginComponent,
+    UploadphotoComponent
   ],
+  entryComponents: [UploadphotoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -40,7 +44,8 @@ import { LoginComponent } from './components/login/login.component'
     FormsModule,
     ReactiveFormsModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

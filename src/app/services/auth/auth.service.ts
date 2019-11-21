@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Observable, Subject } from 'rxjs'
+import { Subject } from 'rxjs'
 import { environment } from 'src/environments/environment'
 import axios from 'axios'
 import { Router } from '@angular/router'
@@ -61,7 +61,11 @@ export class AuthService {
       .then(res => {
         console.log({res})
         console.log(this.router.url)
+
         if (this.router.url === '/login' || this.router.url === '/register') this.router.navigate([''])
+
+        this.authenticatedUser = res.data.user
+        this.authenticatedUserChange.next(this.authenticatedUser)
       })
       .catch(err => {
         console.log({err})

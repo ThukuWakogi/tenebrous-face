@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth/auth.service'
 export class RegisterComponent implements OnInit {
   showPassword = false
   registerForm: FormGroup
-  errors = {}
+  errors: any = {}
 
   constructor(private authService: AuthService) {
     this
