@@ -2,6 +2,9 @@
   <mat-toolbar-row>
     <a [routerLink]="['/']">tenebrous</a>
     <div class="cstm-flex-growth-inbetween"></div>
+    <button mat-icon-button (click)="openDialog()">
+      <mat-icon>camera_alt</mat-icon>
+    </button>
     <a mat-icon-button [routerLink]="['/user/user']">
       <mat-icon>person_outlined</mat-icon>
     </a>
